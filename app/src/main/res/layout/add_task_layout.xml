@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#404040">
+
+    <EditText
+        android:id="@+id/taskTitleTextView"
+        android:layout_width="408dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="128dp"
+        android:background="#1E3848"
+        android:backgroundTint="#1E3848"
+
+        android:editable="false"
+        android:fontFamily="@font/brawler"
+        android:hint="@string/add_task"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/shiftmatelogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:editable="false"
+        android:fontFamily="@font/brawler"
+        android:text="ShiftMate"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.686"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="208dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskTitleTextView">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/CategorySpin"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#FFEBEE"
+                android:prompt="@string/selectCat" />
+
+            <EditText
+                android:id="@+id/CategoryACTV"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/category"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/DescriptionTV"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="@string/description"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/StartTimeTV"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="@string/start_time"
+                android:inputType="time"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/EndTimeTV"
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:layout_marginBottom="10dp"
+                android:ems="10"
+                android:hint="@string/end_time"
+                android:inputType="time"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/ExplanationTV"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:editable="false"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:text="@string/date_of_entry"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textIsSelectable="false" />
+
+            <CalendarView
+                android:id="@+id/calendarView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white" />
+
+            <Button
+                android:id="@+id/btnTakePic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:height="51dp"
+                android:text="@string/take_picture" />
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/LinearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:editable="false"
+                    android:text="@string/back" />
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:editable="false"
+                    android:text="@string/save" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
